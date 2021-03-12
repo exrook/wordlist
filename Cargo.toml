@@ -1,0 +1,31 @@
+[package]
+name = "wordlist"
+version = "0.1.0"
+authors = ["Jacob Hughes <j@distanthills.org>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[features]
+eff_large = []
+eff_short_1 = []
+eff_short_2 = []
+eff = ["eff_large", "eff_short_1", "eff_short_2"]
+pgpfone_two_syllable = []
+pgpfone_three_syllable = []
+pgpfone_two_syllable_lowercase = []
+pgpfone_three_syllable_lowercase = []
+pgpfone = ["pgpfone_two_syllable", "pgpfone_three_syllable"]
+pgpfone_lowercase = ["pgpfone_two_syllable_lowercase", "pgpfone_three_syllable_lowercase"]
+bip_39_czech = []
+bip_39_english = []
+bip_39_french = []
+bip_39_italian = []
+bip_39_japanese = []
+bip_39_korean = []
+bip_39_portuguese = []
+bip_39_spanish = []
+bip_39 = ["bip_39_czech", "bip_39_english", "bip_39_french", "bip_39_italian", "bip_39_japanese", "bip_39_korean", "bip_39_portuguese", "bip_39_spanish"]
+default = ["eff", "pgpfone", "pgpfone_lowercase", "bip_39"]
